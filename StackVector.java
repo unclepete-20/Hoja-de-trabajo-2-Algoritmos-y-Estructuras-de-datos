@@ -1,8 +1,16 @@
+/**
+ * @author Pedro Arriola
+ * Carnet 20188
+ * Universidad del Valle de Guatemala
+ * Algoritmos y estructuras de datos
+ * Seccion 10
+ */
+
 import java.util.EmptyStackException;
 import java.util.Vector;
 
-public class StackVector<E> implements Stack<E>{
-    
+public class StackVector<E> implements Stack<E> {
+
     protected Vector<E> data;
 
     public StackVector() {
@@ -47,4 +55,5 @@ public class StackVector<E> implements Stack<E>{
 
         return data.size();
     }
+
 }
