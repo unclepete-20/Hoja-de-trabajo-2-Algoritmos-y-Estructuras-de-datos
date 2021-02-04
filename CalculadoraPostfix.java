@@ -1,15 +1,55 @@
+/**
+ * @author Pedro Arriola
+ * Carnet 20188
+ * Universidad del Valle de Guatemala
+ * Algoritmos y estructuras de datos
+ * Seccion 10
+ */
+
+import java.util.*;
+
 public class CalculadoraPostfix implements Calculadora{
-    StackVector<String> stack = new StackVector<String>();
+
+    StackVector<Integer> stack;
 
     public CalculadoraPostfix(){
-
+        stack = new StackVector<Integer>(); //Instancia del StackVector
     }
 
     @Override
-    public String calculo(String expresion) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    public int calculo(String expresion) {
 
+        for(int i = 0; i < expresion.length(); i++) {
+
+            char c = expresion.charAt(i); //Se para el string en caracteres separados para poder evaluarlos.
+
+            if(Character.isDigit(c)){
+                stack.push(c - '0');
+            } else {
+                int valorUno = stack.pop(); //Saca el valor 1 para evaluar.
+                int valorDos = stack.pop(); //Saca el valor 2 para evaluar.
+
+                switch(c) {
+                    case '+':
+                    stack.push(valorDos + valorUno); //Realiza la operacion de suma.
+                    break;
+
+                    case '-':
+                    stack.push(valorDos - valorUno); //Realiza la operacion de resta.
+                    break;
+
+                    case '*':
+                    stack.push(valorDos * valorUno); //Realiza la operacion de multiplicacion.
+                    break;
+
+                    case '/':
+                    stack.push(valorDos / valorUno); //Realiza la operacion de division.
+                    break;
+                }
+            }
+        }
+
+        return stack.pop(); //Regresa el resultado.
+    }
 
 }
