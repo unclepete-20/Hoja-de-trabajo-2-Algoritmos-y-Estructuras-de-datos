@@ -1,3 +1,3 @@
-public class Calculadora {
+public interface Calculadora {
 
 }
