@@ -16,6 +16,13 @@ public class CalculadoraPostfix implements Calculadora{
         stack = new StackVector<Integer>(); //Instancia del StackVector
     }
 
+
+    /**
+     * Pre: Se ingresa expresion.
+     * @param expresion cualquier expresion en formato Postfix.
+     * @return String
+     * Post: Regresa el resultado de la expresio evaluada.
+     */
     @Override
     public String Calculo(String expresion) {
 
