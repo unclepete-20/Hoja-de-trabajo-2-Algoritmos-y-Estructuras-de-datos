@@ -13,6 +13,6 @@ public interface Calculadora {
      * @param expresion
      * @return calculo realizado por la calculadora.
      */
-    public int calculo(String expresion); //Evalua la expresión que sea ingresada y regresa el resultado.
+    public String Calculo(String expresion); //Evalua la expresión que sea ingresada y regresa el resultado.
 
 }
