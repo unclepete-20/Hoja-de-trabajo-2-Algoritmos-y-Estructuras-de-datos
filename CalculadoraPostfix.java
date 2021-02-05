@@ -17,7 +17,7 @@ public class CalculadoraPostfix implements Calculadora{
     }
 
     @Override
-    public int calculo(String expresion) {
+    public String Calculo(String expresion) {
 
         for(int i = 0; i < expresion.length(); i++) {
 
@@ -49,7 +49,10 @@ public class CalculadoraPostfix implements Calculadora{
             }
         }
 
-        return stack.pop(); //Regresa el resultado.
+        int conversion = stack.pop();
+        String resultado = Integer.toString(conversion);
+
+        return resultado; //Regresa el resultado.
     }
 
 }
