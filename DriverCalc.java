@@ -45,7 +45,7 @@ public class DriverCalc {
         }
 
         for (String expressions : expresiones) {
-            System.out.println("\nLa evaluacion Postfix realizada en la expresión dio como resultado: " + calc.calculo(expressions));
+            System.out.println("\nLa evaluacion Postfix realizada en la expresión dio como resultado: " + calc.Calculo(expressions));
         }
 
     }
